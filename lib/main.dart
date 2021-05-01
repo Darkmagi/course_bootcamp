@@ -1,4 +1,4 @@
-import 'package:course_bootcamp/homework/exercise_1_page.dart';
+import 'package:course_bootcamp/example_6/example_6_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,6 +17,6 @@ class MyApp extends StatelessWidget {
             accentColor: Colors.blue[500],
             floatingActionButtonTheme: FloatingActionButtonThemeData(
                 backgroundColor: Theme.of(context).primaryColor)),
-        home: Exercise1Page());
+        home: Example6Page());
   }
 }

@@ -8,7 +8,7 @@ class Exercise1Page extends StatefulWidget {
 
 class _Exercise1PageState extends State<Exercise1Page> {
   int _number = 0;
-  bool _even_or_odd = true;
+  bool _evenOdd = true;
 
   AppBar _appBar() {
     return AppBar(title: Text("HomeWork Exercise 1"));
@@ -18,7 +18,7 @@ class _Exercise1PageState extends State<Exercise1Page> {
     return Container(
         child: Center(
             child: Text("Number: $_number",
-                style: _even_or_odd
+                style: _evenOdd
                     ? TextStyle(fontSize: 30, color: Colors.green)
                     : TextStyle(fontSize: 30, color: Colors.black))));
   }
@@ -51,19 +51,19 @@ class _Exercise1PageState extends State<Exercise1Page> {
   }
 
   _gettingEvenOdd(int _number) {
-    bool evenOdd;
+    bool cases;
 
     if (_number % 2 == 0) {
-      evenOdd = true;
+      cases = true;
     } else {
-      evenOdd = false;
+      cases = false;
     }
-    return evenOdd;
+    return cases;
   }
 
   void _incrementNumber() {
     _number++;
-    _even_or_odd = _gettingEvenOdd(_number);
+    _evenOdd = _gettingEvenOdd(_number);
     setState(
         () {}); //hace que se cuando se termine la funcion se reinicie todo lo que permite el aumento en tiempo real sin necesidad de recargar la app
   }
@@ -73,7 +73,7 @@ class _Exercise1PageState extends State<Exercise1Page> {
     if (_number < 0) {
       _number = 0;
     }
-    _even_or_odd = _gettingEvenOdd(_number);
+    _evenOdd = _gettingEvenOdd(_number);
     setState(
         () {}); //hace que se cuando se termine la funcion se reinicie todo lo que permite el aumento en tiempo real sin necesidad de recargar la app
   }
